@@ -1,9 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>bulb toggle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+       .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        .bulb-container {
+            background-color: rgba(235, 174, 174, 0.1);
+            box-shadow: 0 25px 40px 0px rgba(76, 68, 68, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+
+        }
+
+        #img-bulb {
+            width: 150px;
+        }
+
+        button {
+           background-color: #508D4E;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 16px;
+            width: 80px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: 1px solid black;
+
+        }
+
+      
+
+        .sun {
+            width: 40px;
+        }
+
+        .moon {
+            width: 40px;
+        }
+
+        .theme-select {
+            right: 5px;
+            position: fixed;
+            top: 0;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        } 
+
+        .bg-dark {
+            background-color: #121212;
+            color: white;
+
+        }
+
+        .bg-light {
+            background-color: #d2d3db;
+        }
+    </style>
+
 </head>
-<body>
-    
+
+<body id="body" class="body">
+    <div class="bulb-container">
+        <h3>Bulb Toggler</h3>
+        <img src="off.png" id="img-bulb">
+        <br>
+        <button onclick="bulb()">toggle</button>
+
+    </div>
+    <div class="theme-select">
+        <img src="sun.png" class="sun" onclick="theme('1')">
+        <img src="moon.png" class="moon" onclick="theme('2')">
+    </div>
+    <script>
+        const toggle = document.getElementById("img-bulb");
+        function bulb() {
+            toggle.src = toggle.src.includes('off.png') ? 'on.png' : 'off.png';
+        }
+        const body = document.getElementById("body");
+
+
+         
+        function theme(num) {
+            switch (num) {
+                case '1':
+                    body.classList.remove("bg-dark");
+                    body.classList.add("bg-light");
+                    breakl;
+                case '2':
+                    body.classList.remove("bg-light");
+                    body.classList.add("bg-dark");
+                    breakl;
+            }
+        }
+
+
+
+
+
+    </script>
 </body>
+
 </html>
