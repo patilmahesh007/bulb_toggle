@@ -76,19 +76,19 @@
 <body id="body" class="body">
     <div class="bulb-container">
         <h3>Bulb Toggler</h3>
-        <img src="off.png" id="img-bulb">
+        <img src="./off.png" id="img-bulb">
         <br>
         <button onclick="bulb()">toggle</button>
 
     </div>
     <div class="theme-select">
-        <img src="sun.png" class="sun" onclick="theme('1')">
-        <img src="moon.png" class="moon" onclick="theme('2')">
+        <img src="./sun.png" class="sun" onclick="theme('1')">
+        <img src="./moon.png" class="moon" onclick="theme('2')">
     </div>
     <script>
-        const toggle = document.getElementById("img-bulb");
+        const toggle = document.getElementById("./img-bulb");
         function bulb() {
-            toggle.src = toggle.src.includes('off.png') ? 'on.png' : 'off.png';
+            toggle.src = toggle.src.includes('./off.png') ? './on.png' : './off.png';
         }
         const body = document.getElementById("body");
 
