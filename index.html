@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bulb toggler</title>
+    <title>Document</title>
     <style>
         
        .body {
@@ -17,15 +17,14 @@
 
         .bulb-container {
             background-color: rgba(235, 174, 174, 0.1);
-            box-shadow: 0 25px 40px 0px rgba(76, 68, 68, 0.3);
+            box-shadow: 0 25px 40px 0px rgba(92, 86, 86, 0.3);
             border-radius: 20px;
             padding: 30px;
             width: 200px;
-            text-align: center;
 
         }
 
-        #img-bulb {
+        #bulb {
             width: 150px;
         }
 
@@ -68,6 +67,7 @@
 
         .bg-light {
             background-color: #d2d3db;
+            color: black;
         }
     </style>
 
@@ -76,19 +76,19 @@
 <body id="body" class="body">
     <div class="bulb-container">
         <h3>Bulb Toggler</h3>
-        <img src="./off.png" id="img-bulb">
+        <img src="off.png" id="bulb">
         <br>
         <button onclick="bulb()">toggle</button>
 
     </div>
     <div class="theme-select">
-        <img src="./sun.png" class="sun" onclick="theme('1')">
-        <img src="./moon.png" class="moon" onclick="theme('2')">
+        <img src="sun.png" class="sun" onclick="theme('1')">
+        <img src="moon.png" class="moon" onclick="theme('2')">
     </div>
     <script>
-        const toggle = document.getElementById("./img-bulb");
+        const toggle = document.getElementById("bulb");
         function bulb() {
-            toggle.src = toggle.src.includes('off.png') ? './on.png' : './off.png';
+            toggle.src = toggle.src.includes('off.png') ? 'on.png' : 'off.png';
         }
         const body = document.getElementById("body");
 
@@ -99,11 +99,11 @@
                 case '1':
                     body.classList.remove("bg-dark");
                     body.classList.add("bg-light");
-                    breakl;
+                    break;
                 case '2':
                     body.classList.remove("bg-light");
                     body.classList.add("bg-dark");
-                    breakl;
+                    break;
             }
         }
 
